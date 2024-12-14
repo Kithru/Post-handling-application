@@ -1,1 +1,1 @@
-Please contact administrator.
+Please contact administrator for more info.
