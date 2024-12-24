@@ -11,11 +11,7 @@ class Classmanager {
             $row = mysql_fetch_assoc($results);
             $_SESSION['userid'] = $row['userid'];
             $hashedPassword = $row['password'];
-<<<<<<< HEAD
         
-=======
-           
->>>>>>> a7e2214821b8679f0cbd144e503a7f579485dc1f
             if (password_verify($password, $hashedPassword)) {
                 return "verified";
             } else {
@@ -23,6 +19,26 @@ class Classmanager {
             }
 
     }
+
+    public function register($email,$password) {
+        
+        $con = DBConnect::getConnection();
+        
+            $date_with_time = date("Y-m-d H:i:s");
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+            $email = mysql_real_escape_string($email);
+            $password = mysql_real_escape_string($password);
+            $sql = "INSERT INTO user (email, password, added_date) VALUES ('$email', '$hashedPassword', '$date_with_time')";
+        
+            $results = mysql_query($sql, $con) or die("couldn't execute the sql");
+
+            if ($results) {
+                return 'added';
+            } else {
+                return 'failed';
+            }
+        
+    }  
 
 }
 
