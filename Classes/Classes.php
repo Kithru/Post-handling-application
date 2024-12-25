@@ -23,7 +23,8 @@ class Classmanager {
     public function register($email,$password) {
         
         $con = DBConnect::getConnection();
-        
+        $duplicate = $this->checkduplicate($email,$password);
+        if ($duplicate != '1') {
             $date_with_time = date("Y-m-d H:i:s");
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $email = mysql_real_escape_string($email);
@@ -37,7 +38,9 @@ class Classmanager {
             } else {
                 return 'failed';
             }
-        
+        }  else {
+            return 'duplicate';
+        }
     }  
 
 }
