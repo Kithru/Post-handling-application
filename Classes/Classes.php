@@ -30,9 +30,7 @@ class Classmanager {
             $email = mysql_real_escape_string($email);
             $password = mysql_real_escape_string($password);
             $sql = "INSERT INTO user (email, password, added_date) VALUES ('$email', '$hashedPassword', '$date_with_time')";
-        
             $results = mysql_query($sql, $con) or die("couldn't execute the sql");
-
             if ($results) {
                 return 'added';
             } else {
