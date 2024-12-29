@@ -180,6 +180,7 @@ if (isset($_POST["submit"])) {
             <div id="div_header">
                 <?php include('header.php') ?>
             </div>
+            
             <div id="div_body">
                 <div id="div_body_content" align="center" >
                     <div class="container">
