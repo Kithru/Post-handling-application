@@ -33,10 +33,10 @@ if (isset($_POST["submit"])) {
                       alert('Registered successfully.');
                       status = '';
                       return false;
-                  } else if (status === 'duplicate') {
+                  } else if (status == 'duplicate') {
                       alert('User already exists.');
                       status = '';
-                  } else if (status === 'failed') {
+                  } else if (status == 'failed') {
                       alert('Error in the process.');
                       status = '';
                   } 
