@@ -39,10 +39,10 @@ if (isset($_POST["submit"])) {
         <script type="text/javascript">
               $(document).ready(function () {
                   var status = $('#status').val();
-                  if (status === 'verified') {
+                  if (status == 'verified') {
                       alert('Logged in successfully.');
                       window.location.href = "create_post.php";
-                  } else if (status === 'Incorrect') {
+                  } else if (status == 'Incorrect') {
                       alert('Incorrect username or password.');
                       window.location.href = "index.php";
                   }
@@ -180,7 +180,6 @@ if (isset($_POST["submit"])) {
             <div id="div_header">
                 <?php include('header.php') ?>
             </div>
-            
             <div id="div_body">
                 <div id="div_body_content" align="center" >
                     <div class="container">
@@ -209,6 +208,9 @@ if (isset($_POST["submit"])) {
                 </div>
             </div>
             
+            <div id="div_footer" align="center">
+                <?php include('footer.php') ?>
+            </div>
         </div>
 
 	 
