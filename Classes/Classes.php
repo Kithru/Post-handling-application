@@ -17,7 +17,6 @@ class Classmanager {
             } else {
                 return "Incorrect";
             }
-
     }
 
     public function register($email,$password) {
