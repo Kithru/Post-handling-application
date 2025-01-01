@@ -11,7 +11,6 @@ class Classmanager {
             $row = mysql_fetch_assoc($results);
             $_SESSION['userid'] = $row['userid'];
             $hashedPassword = $row['password'];
-        
             if (password_verify($password, $hashedPassword)) {
                 return "verified";
             } else {
