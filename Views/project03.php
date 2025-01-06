@@ -57,6 +57,7 @@ if (isset($_POST["submit"])) {
               });
         </script>
         <style>
+		
             * {box-sizing: border-box}
 
             .container {
