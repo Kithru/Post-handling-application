@@ -9,7 +9,7 @@ if (session_status() == PHP_SESSION_ACTIVE) {
 }
 
 if (session_status() == PHP_SESSION_NONE) {
-  session_start();
+   session_start();
 }
 
 require_once "../Classes/Classes.php";
@@ -26,7 +26,6 @@ if (isset($_REQUEST['password'])) {
 if (isset($_POST["submit"])) {
     $status = $classManager->login($email,$password);
 }
-
 
 ?>
 <!DOCTYPE HTML>
