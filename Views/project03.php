@@ -17,6 +17,7 @@ if (isset($_POST["submit"])) {
   
   $status = $classManager->register($email,$password);
 }
+	
 ?>
 <!DOCTYPE HTML>
 <html>
