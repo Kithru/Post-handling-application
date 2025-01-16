@@ -41,12 +41,11 @@ class Classmanager {
 
     public function checkduplicate($email,$password) {
         $con = DBConnect::getConnection();
-
         $query = "SELECT * FROM `user` WHERE `email`='$email' LIMIT 1";
         $results = mysql_query($query, $con) or die(mysql_error());
         $count=mysql_num_rows($results);
             if($count>0){
-                    return 1;
+                return 1;
             }else{
                 return 0;
             }
