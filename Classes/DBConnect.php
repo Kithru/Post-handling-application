@@ -12,6 +12,7 @@ class DBConnect {
         mysql_select_db($database, $connection) or die("Couldn't select the db");
         return $connection;
     }
+
     
 }
 ?>
