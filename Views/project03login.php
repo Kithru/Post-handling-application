@@ -170,7 +170,7 @@ if (isset($_POST["submit"])) {
             }
 
 
-        </style>
+</style>
     </head>
     <body>
     <input type="hidden" name="status" id="status" value="<?php echo $status; ?>">
