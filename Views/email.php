@@ -23,7 +23,7 @@ try {
 
     //Recipients
     $mail->setFrom('123456@gmail.com', 'AAA');
-    $mail->addAddress('kithruviduranga@gmail.com', 'AAA');     //Add a recipient
+    $mail->addAddress('123456@gmail.com', 'AAA');     //Add a recipient
     $mail->addAddress('kithruV@icbtcampus.edu.lk');               //Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
